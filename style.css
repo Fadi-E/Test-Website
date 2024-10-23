@@ -1,0 +1,282 @@
+/* General body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    background-image: url('https://fadi-e.github.io/Test-Website/cover1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: right;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #fff;
+}
+
+/* Nav Bar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent gray */
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 40px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff4081; /* Highlight color */
+}
+
+/* Responsive Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6); /* More opaque for mobile */
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Text container for better readability */
+.text-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px auto; /* Center the container */
+    max-width: 90%; /* Limit the width of the container */
+    width: fit-content; /* Make the container just big enough for the text */
+    text-align: right; /* Align text to the right */
+}
+
+/* Home Section */
+#home {
+    padding: 120px 20px 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+#welcome {
+    max-width: 70%;
+}
+#about {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to a new line on smaller screens */
+    justify-content: space-between; /* Adds space between items */
+}
+#aboutext {
+    flex: 1 1 100%; /* Full width for the third item */
+}
+#logo {
+    margin: 20px;
+    border-radius: 20px;
+    width: 350px;
+    margin-left: 70px;
+}
+
+/* Book list styles */
+#books {
+    margin-top: 80px;
+}
+.book-list {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.book {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 50px;
+    border-radius: 10px; /* Rounded corners */
+    margin: 50px auto; /* Center the container */
+    max-width: 90%; /* Limit the width of the container */
+    width: fit-content; /* Make the container just big enough for the text */
+    text-align: center; /* Align text to the right */
+}
+
+.book img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    #books {
+        margin-top: 50px;
+    }
+    .book-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book {
+        flex-basis: 100%;
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 50px;
+    border-radius: 10px; /* Rounded corners */
+    margin: 50px auto; /* Center the container */
+    max-width: 90%; /* Limit the width of the container */
+    width: fit-content; /* Make the container just big enough for the text */
+    text-align: center; /* Align text to the right */
+
+    }
+
+    .book img {
+        max-width: 300px;
+    }
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem; /* Reduce H1 size for smaller screens */
+    }
+
+    /* Hide the menu initially */
+    #nav-bar ul {
+        display: none; /* Initially hide the menu */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #nav-bar ul.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    #nav-bar ul li {
+        margin: 10px 0;
+    }
+
+    #nav-bar ul li a {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+    #home {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #logo {
+        margin: 0;
+    }
+    }
+
+/* FAQ and Contact sections */
+#faq, #contact {
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#faq p, #contact p {
+    margin: 10px 0;
+}
+
+/* Section padding */
+section {
+    padding: 50px 20px;
+}
+
+/* Footer styles */
+footer p {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
