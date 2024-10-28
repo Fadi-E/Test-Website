@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="Ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Navbar Layout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <nav id="navbar" class="navbar">
+      <button class="toggle-btn" onclick="toggleNavbar()">☰</button>
+      <ul id="nav-links">
+        <li><a href="#">الرئيسية</a></li>
+        <li><a href="#">عنا</a></li>
+        <li><a href="#">جديدنا</a></li>
+        <li><a href="#">المؤلفين</a></li>
+        <li><a href="#">تواصل معنا</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <header>
+        <h1>دار المثقف للنشر والتوزيع</h1>
+        <p>Your gateway to amazing books and brilliant authors.</p>
+      </header>
+      <section class="content">
+        <h2>Latest Books</h2>
+        <div class="book-gallery">
+          <div class="book-card">
+            <img src="book1.jpg" alt="Book 1">
+            <p>Book Title 1</p>
+          </div>
+          <div class="book-card">
+            <img src="book2.jpg" alt="Book 2">
+            <p>Book Title 2</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
