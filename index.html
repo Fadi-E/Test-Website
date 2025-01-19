@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Clear Transformations</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body class="font-sans">
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 bg-gray-900 bg-opacity-50 z-20 hidden">
+        <div class="bg-white h-screen w-64 p-4 transform transition-transform duration-300 -translate-x-full">
+            <div class="flex justify-between items-center mb-8">
+                <span class="text-xl font-bold text-blue-600">Menu</span>
+                <button onclick="toggleMobileMenu()" class="text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
+                <a href="#portfolio" class="text-gray-700 hover:text-blue-600 transition-colors">Portfolio</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-full"></div>
+                    <div class="text-2xl font-bold text-blue-600">Chetiret Glass</div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 transition-colors">Portfolio</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <button onclick="toggleMobileMenu()" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen pt-16 bg-gradient-to-r from-blue-500 to-blue-600 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="max-w-6xl mx-auto px-4 py-20 relative">
+            <div class="text-center text-white" data-aos="fade-up">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Transform Your Space <br/>with Glass</h1>
+                <p class="text-xl md:text-2xl mb-12 opacity-90">Innovative glass solutions for modern architecture</p>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="#contact" class="bg-white text-blue-600 px-8 py-4 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105">Get Started</a>
+                    <a href="#portfolio" class="border-2 border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-blue-600 transition duration-300 transform hover:scale-105">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover our comprehensive range of glass transformation solutions designed to elevate your space.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-blue-600 text-5xl mb-6 transform group-hover:scale-110 transition duration-300">🪟</div>
+                    <h3 class="text-2xl font-bold mb-4">Custom Glass Design</h3>
+                    <p class="text-gray-600 mb-4">Bespoke glass solutions tailored to your specific needs and aesthetics.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Custom shapes and sizes</li>
+                        <li>• Decorative patterns</li>
+                        <li>• Color options</li>
+                    </ul>
+                </div>
+                <div class="group bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-blue-600 text-5xl mb-6 transform group-hover:scale-110 transition duration-300">🏢</div>
+                    <h3 class="text-2xl font-bold mb-4">Commercial Glazing</h3>
+                    <p class="text-gray-600 mb-4">Professional glass installations for commercial buildings and offices.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Storefront systems</li>
+                        <li>• Safety glazing</li>
+                        <li>• Energy efficient solutions</li>
+                    </ul>
+                </div>
+                <div class="group bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-blue-600 text-5xl mb-6 transform group-hover:scale-110 transition duration-300">🏠</div>
+                    <h3 class="text-2xl font-bold mb-4">Residential Services</h3>
+                    <p class="text-gray-600 mb-4">Transform your home with our premium glass solutions and installations.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Shower enclosures</li>
+                        <li>• Glass railings</li>
+                        <li>• Custom mirrors</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Our Portfolio</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore our collection of completed projects showcasing our expertise in glass transformation.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/api/placeholder/400/300" alt="Project 1" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <h3 class="text-white text-xl font-bold mb-2">Modern Office Building</h3>
+                            <p class="text-gray-200">Complete glass facade renovation for a corporate headquarters.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/api/placeholder/400/300" alt="Project 2" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <h3 class="text-white text-xl font-bold mb-2">Luxury Home Design</h3>
+                            <p class="text-gray-200">Custom glass installations for a modern residential project.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <img src="/api/placeholder/400/300" alt="Project 3" class="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <h3 class="text-white text-xl font-bold mb-2">Shopping Mall Renovation</h3>
+                            <p class="text-gray-200">Large-scale commercial glazing project for retail space.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ready to transform your space? Get in touch with us today for a free consultation.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg" data-aos="fade-right">
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-medium">Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"/>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-medium">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"/>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-medium">Message</label>
+                            <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">Send Message</button>
+                    </form>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-6">Visit Our Showroom</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold mb-2">Address</h4>
+                            <p class="text-gray-600">123 Glass Street<br/>City, State 12345</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Hours</h4>
+                            <div class="space-y-2 text-gray-600">
+                                <p>Monday - Friday: 9AM - 6PM</p>
+                                <p>Saturday: 10AM - 4PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-2">Contact</h4>
+                            <div class="space-y-2 text-gray-600">
+                                <p>Phone: (555) 123-4567</p>
+                                <p>Email: info@crystalclear.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Hear from our satisfied customers about their experience with Crystal Clear.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-blue-600 text-4xl mb-4">"</div>
+                    <p class="text-gray-600 mb-6">Crystal Clear transformed our office space completely. The quality of work and attention to detail was exceptional.</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">John Smith</h4>
+                            <p class="text-gray-600">CEO, Tech Industries</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-blue-600 text-4xl mb-4">"</div>
+                    <p class="text-gray-600 mb-6">The team was professional and efficient. Our new glass installations have completely modernized our home.</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-600">Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-blue-600 text-4xl mb-4">"</div>
+                    <p class="text-gray-600 mb-6">Outstanding service from start to finish. The design team helped us create exactly what we envisioned.</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Mike Wilson</h4>
+                            <p class="text-gray-600">Architect</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full"></div>
+                        <div class="text-2xl font-bold">Crystal Clear</div>
+                    </div>
+                    <p class="text-gray-400">Transforming spaces through innovative glass solutions since 1995.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Services</h3>
+                    <ul class="space-y-4">
+                        <li class="text-gray-400">Custom Glass Design</li>
+                        <li class="text-gray-400">Commercial Glazing</li>
+                        <li class="text-gray-400">Residential Services</li>
+                        <li class="text-gray-400">Glass Repair</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Contact</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li>123 Glass Street</li>
+                        <li>City, State 12345</li>
+                        <li>Phone: (555) 123-4567</li>
+                        <li>Email: info@crystalclear.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Crystal Clear. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const menuContent = menu.querySelector('div');
+            menu.classList.toggle('hidden');
+            menuContent.classList.toggle('-translate-x-full');
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white/95', 'backdrop-blur-sm');
+                navbar.classList.remove('bg-white');
+            } else {
+                navbar.classList.remove('bg-white/95', 'backdrop-blur-sm');
+                navbar.classList.add('bg-white');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                const menu = document.getElementById('mobileMenu');
+                if (!menu.classList.contains('hidden')) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
